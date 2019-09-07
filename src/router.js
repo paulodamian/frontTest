@@ -5,7 +5,9 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  /* I like to run my apps in history mode, but I have used hash for the sake of simplicity
+  to run it locally to test the service worker */
+  mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
     {

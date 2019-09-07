@@ -6,7 +6,7 @@
           <h3>Professions</h3>
           <ol><li v-for="p in getProfesions(gnome)" :key="p">{{p}}</li></ol>
         </div>
-        <a :href="'/detail/' + gnome.id">Gnome details</a>
+        <a :href="'/#/detail/' + gnome.id">Gnome details</a>
       </div>
     </div>
 </template>
