@@ -71,4 +71,22 @@ export default {
     }
   }
 }
+
+@media (max-width:1365px) {
+  .cardContainer {
+    width: 33.33%;
+  }
+}
+
+@media (max-width:1023px) {
+  .cardContainer {
+    width: 50%;
+  }
+}
+
+@media (max-width:719px) {
+  .cardContainer {
+    width: 100%;
+  }
+}
 </style>

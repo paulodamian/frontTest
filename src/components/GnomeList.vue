@@ -36,15 +36,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-  .gnomeSearch {
+  .gnomeList {
+    width: fit-content;
+    max-width: 1500px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .gnomeSearch {
     
-    input[type=text] {
-      font-size: 22px;
-      padding: 3px 5px;
-      width: 400px;
-      max-width: 90%;
-      margin: 20px auto;
-      border-radius: 3px;
+      input[type=text] {
+        font-size: 22px;
+        padding: 3px 5px;
+        width: 400px;
+        max-width: 90%;
+        margin: 20px auto;
+        border-radius: 3px;
+      }
     }
   }
 </style>
