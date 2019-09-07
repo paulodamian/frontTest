@@ -1,7 +1,9 @@
 <template>
   <div class="gnomeList">
-    <input type="text" v-model="search" />
-    <GnomeCard v-for="gnome in filteredItems" :gnome='gnome' :key="gnome.id"></GnomeCard>
+    <div class="gnomeSearch">
+      <input type="text" v-model="search" placeholder="Search by name"/>
+    </div>
+    <GnomeCard v-for="gnome in filteredItems" :key="gnome.id" :gnome='gnome'></GnomeCard>
   </div>
 </template>
 
@@ -25,7 +27,7 @@ export default {
   computed: {
     filteredItems() {
       return this.list.filter(item => {
-         return item.name.indexOf(this.search) > -1
+         return item.name.toLowerCase().indexOf(this.search.toLowerCase()) > -1
       })
     }
   }
@@ -34,4 +36,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+  .gnomeSearch {
+    
+    input[type=text] {
+      font-size: 22px;
+      padding: 3px 5px;
+      width: 400px;
+      max-width: 90%;
+      margin: 20px auto;
+      border-radius: 3px;
+    }
+  }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Gnome List</router-link>
+      <router-link to="/">Gnome directory</router-link>
     </div>
     <router-view/>
   </div>
@@ -29,6 +29,10 @@
 html {
   box-sizing: border-box;
   font-size: 16px;
+}
+
+body {
+  background-color: #e5e5e5;
 }
 
 *, *:before, *:after {
