@@ -4,6 +4,7 @@
     <div v-if="!loading" class="container">
       <div class="header">
         <img :src="gnome.thumbnail" />
+        <!-- I am using a table just because the data that I have to show has a table structure -->
         <table>
           <tr v-for="(f, index) in fields" :key="index">
             <td>{{f}}</td>
