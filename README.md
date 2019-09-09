@@ -1,6 +1,6 @@
 # FrontTest
 
-I have used basic styles for the application due I am not a designer, but I could implement any given design on any application/page.
+I have used basic styles for the application due I am not a designer, but I can implement any given design on any application/page.
 
 ## Project setup
 ```
@@ -27,5 +27,5 @@ npm run test:unit
 A simple solution is to intall npm serve (https://www.npmjs.com/package/serve)
 npm install serve
 Then create the build (npm run build)
-npm serve dist/
+serve dist/
 ```
