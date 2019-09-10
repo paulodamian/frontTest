@@ -1,5 +1,5 @@
 <template>
-    <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    <div v-if="this.$store.state.loading" class="lds-ring"><div></div><div></div><div></div><div></div></div>
 </template>
 
 <script>

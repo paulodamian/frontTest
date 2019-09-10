@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <Loader v-if="loading" />
-    <GnomeList :list="gnomes" v-if="!loading"/>
+    <Loader />
+    <GnomeList :list="gnomes" v-if="!this.$store.state.loading"/>
   </div>
 </template>
 
@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       gnomes: [],
-      loading: true
     }
   },
   components: {
@@ -24,13 +23,14 @@ export default {
     Loader
   },
   created () {
+    this.$store.commit('isLoading');
     this.fetchData()
   },
   methods: {
     fetchData() {
       axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json').then((response) => {
         this.gnomes = response.data.Brastlewark;
-        this.loading = false;
+        this.$store.commit('loaded');
       });  
     }
   }

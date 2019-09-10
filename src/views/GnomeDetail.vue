@@ -1,7 +1,7 @@
 <template>
   <div class="gnomeDetail">
-    <Loader v-if="loading" />
-    <div v-if="!loading" class="container">
+    <Loader />
+    <div v-if="!this.$store.state.loading" class="container">
       <div class="header">
         <img :src="gnome.thumbnail" />
         <!-- I am using a table just because the data that I have to show has a table structure -->
@@ -34,13 +34,13 @@ export default {
     return {
       gnome: {},
       fields: ['name', 'age', 'weight', 'height', 'hair_color'],
-      loading: true
     }
   },
   components: {
     Loader
   },
   created () {
+    this.$store.commit('isLoading');
     this.fetchData();
   },
   methods: {
@@ -48,7 +48,7 @@ export default {
       //This request is just to emulate a real application fetching the endpoint to retrive a particular instance of an object
       axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json').then((response) => {
         this.gnome = response.data.Brastlewark.find(item => {
-          this.loading = false;
+          this.$store.commit('loaded');
           return item.id == this.$route.params.id
         })
       });  
