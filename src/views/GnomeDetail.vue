@@ -49,7 +49,7 @@ export default {
       axios.get('https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json').then((response) => {
         this.gnome = response.data.Brastlewark.find(item => {
           this.$store.commit('loaded');
-          return item.id == this.$route.params.id
+          return item.id == this.$route.params.id;
         })
       });  
     }
