@@ -1,5 +1,6 @@
 # FrontTest
 
+Challenge tasks: https://github.com/paulodamian/frontTest/blob/master/frontend_test%20VUE.pdf
 I have used basic styles for the application due I am not a designer, but I can implement any given design on any application/page.
 
 ## Project setup
